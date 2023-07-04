@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{border: 2px solid red}
+        span{border: 2px solid green}
+        /* ตกเเต่งหน้าเว็บ เราสามารถกำหนดรูปเเบบของ div span ได้จากหัวตาราง     border => เส้นขอบ   solid => เส้นทึบ  */
+    </style>
+</head>
+<body>
+    <h1>หน้าที่ 2 นะ</h1>
+    <hr>
+        <!-- การสร้างตาราง(table)
+    <table> สร้างตาราง
+    <thead> เนื้อหาหัวตาราง
+    <tbody> เนื้อหาตาราง
+    <tfoot> ใต้ตางราง
+    <tr> เเถว
+    <td> คอลัมน์
+    <th> หัวคอลัมน์ -->
+        <!-- attribute ของตาราง
+        border = "ความหนาของเส้น" เริ่มต้นที่ 0
+        width = "%" ความกว้างหน่วยเป็น %
+        bgcolor = "สี" สีพื้นหลังตาราง
+        <table bgcolor = "สี"> กำหนดสีทั้งเเถวเเละคอลัมน์
+        <tr bgcolor = "สี"> สีเเถว
+        <td bgcolor = "สี"> สีคอลัมน์ -->
+            <!-- Attribute ของตาราง
+            colspan=“x” รวมคอลัมน์ ค่า x คือจํานวนคอลัมน์ที่ต้องการรวมเข้าด้วยกัน (ช่อง <td>)  ง่ายๆคือเป็น1คอลัมน์เเต่กินหลายพื้นที่
+            rowspan=“x” รวมแถว ค่า x คือจํานวนแถวที่ต้องการรวมเข้าด้วยกัน 
+            align=“left, center, right” จัดตําแหน่งของภาพ หรืออักษรภายในช่องตาราง <td> ค่าปกติคือ left กำหนดได้ตามเเต่ละที่เลย หรือทั้งหมดก็ได้
+            Cellpadding แสดงข้อมูลภายในตาราง หากมีค่ามากก็จะมีพื้นที่การแสดงผลเป็นที่ว่างมากขึ้น โดยมีค่าเริ่มต้นเป็น 0 (หน่วย Pixel)  ขยายพื้นที่ด้านใน
+            Cellspacing กําหนดขนาดเส้นตาราง หากมีค่ามากขึ้นเส้นตารางก็ จะมีขนาดมากตามไปด้วย โดยมีค่าเริ่มต้นเป็น 0 (หน่วย Pixel) ขอบก็จะหนาขึ้น -->
+
+
+
+    <!-- การจัดกลุ่มด้วย div , span
+    <span></span> ใช้จัดกลุ่มข้อความหรือแท็กต่าง ๆ เข้าเป็นกลุ่มเดียวกันเพื่อกําหนด สี รูปแบบตัวอักษร หรือ style ให้กับข้อความและแท็กภายใต้ <span> ให้เป็นรูปแบบเดียวกัน
+    <div></div> ใช้จัดกลุ่มข้อความหรือแท็กต่าง ๆ เข้าเป็นกลุ่มเดียวกันลักษณะคล้ายๆกับ <span>แต่แตกต่างกันตรงที่แท็ก div จะมีการขึ้นบรรทัดใหม่ก่อนเริ่มแสดงข้อความภายใต้แท็ก div -->
+
+    <h1>รายการสินค้า</h1>
+    <table border="1" bgcolor="yellow" cellpadding="10" cellspacing="5">
+        <thead>
+            <th>รหัสสินค้า</th>
+            <th>ภาพ</th>
+            <th>ชื่อ</th>
+            <th>ราคา</th>
+            <th>เลือกสินค้า</th>
+        </thead>
+        <!-- <td> ต้องตามหัวตาราง หรือ <td> = <th> -->
+        <!-- <td> <th> มันจะจับคู่ให้อัตโนมัติเลย -->
+        <tbody align="center">
+            <tr bgcolor="blue">
+                <td>p001</td>
+                <td colspan="2">
+                    <img src="https://th.bing.com/th/id/OIP.KcVaES2EvCh6mj97ygCNYgHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="">
+                </td>
+                <td bgcolor="red">ส้มตำ</td>
+                <td>500</td>
+                <td rowspan="2">
+                    <a href="#">สั่งซื้อ</a>
+                    <!-- # แปลว่ายังไม่ได้กำหนดลิงค์ในตอนเริ่มต้น -->
+                </td>
+            </tr>
+            <tr bgcolor="pink" align="center">
+                <td>p002</td>
+                <td>ไม่มี</td>
+                <td>ตำบักหุ่ง</td>
+                <td align="right">200</td>
+                <td><a href="#">สั่งซื้อ</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" align="right"><b> เหมาจ่าย 500000</b></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <!-- <span style="color: red">
+        <h3>python</h3>
+        <p>Weeraphat</p>
+    </span>
+
+    <div style="color: green">
+        <h3>11111111</h3>
+        <p>222222222</p>
+    </div> -->
+    <hr>
+    <h1>Block VS Inline</h1>
+    <!-- inline คือ ความยาวตามตัวหนังสือ
+         block คือ ความยาวจะกินทั้งเเถว -->
+    <h5>Inkine</h5>
+    <span>Weeraphat</span>
+    <span>Weeraphat</span>
+    <h5>Block</h5>
+    <div>Weeraphat</div>
+    <div>Weeraphat</div>
+</body>
+</html>

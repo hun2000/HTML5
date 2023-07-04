@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ลงทะเบียน
+    </title>
+    <style>
+        form{
+            border: 2px solid;
+        }
+        input{
+            border: 1px solid gold;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">เเบบฟอร์มลงทะเบียน</h1>
+    <!-- <form action=""></form> -->
+    <!-- action จะส่งข้อมูลไปที่ server เเต่เราไม่ต้องทำถึงขนาดนั้นก็ได้ -->
+    <!-- HTML FORM 
+    การพัฒนาเว็บแอปพลิเคชั่นจําเป็นต้องมีการสร้างแบบฟอร์มที่ผู้ใช้งานสามารถป้อนข้อมูลต่างๆได้ เพื่อนําข้อมูลที่ป้อนนั้น
+    ไปทําการประมวลผลอีกทีโดยการรับค่าข้อมูลจะดําเนินการผ่าน <form>....</form> 
+    
+    tag ย่อยต่างๆ
+    <input> สร้างช่องรับข้อความต่างๆ รับ1บรรทัด
+    <select> เเสดงตัวเลือกในรูปเเบบ Drop-down
+        <option> ส้ร้างตัวเลือก
+    <button> สร้างปุ่ม
+    <label> กำหนดป้ายชื่อให้ช่องรับข้อมูล
+    <textarea> สร้างช่องรับข้อความเเบบหลายบรรทัด-->
+
+    <!-- 
+    กำหนดได้หลาย type เช่น date ก็จะเป็น วันเดือนปี
+                          datetime วันเดือนปี เวลา
+    value กำหนดค่าเริ่มต้น
+    placeholder ไกด์ว่าให้ป้อนอะไร -->
+    <form align="center">
+        <div>
+            <label for="firstname">ชื่อ</label>
+            <!-- required ต้องกรอกช่องนี้  เอาไปใส่ที่ไหนตรงนั้นก็ต้องกรอก-->
+            <input type="text" name="fname" placeholder="ป้อนชื่อของคุณ" required>
+        </div>
+        <div>
+            <label for="lastname">นามสกุล</label>
+            <!-- readonly อ่านได้อย่างเดียว เปลี่ยนค่าไม่ได้ -->
+            <input type="text" name="lname" placeholder="ป้อนนามสกุลของคุณ" required readonly>
+        </div>
+        <div>
+            <label for="email">e-mail</label>
+            <!-- type="email" มันจะตรวจว่าเป็น mail จริงๆไหม -->
+            <input type="email" name="email" id="" required>
+        </div>
+        <div>
+            <label for="password">รหัสผ่าน</label>
+            <!-- type="password" จะเป็นจุดกลมๆดำ เเล้วสามารถดูรหัสตอนตั้งได้ -->
+            <input type="password" name="password" id="" placeholder="ความยาวหย่างน้อย6ตัว">
+        </div>
+        <div>
+            <label for="visit">ที่อยู่</label>
+            <!-- สามารกำหนดความกว้างความยากได้ เป็น text ยาวๆ เเบบข้อความเพิ่มเติม-->
+            <textarea name="visit" id="" cols="20" rows="5"></textarea>
+        </div>
+        <div>
+            <label for="">อายุ</label>
+            <!-- value กำหนดค่าเริ่มต้น -->
+            <input type="number" placeholder="ปี" name="age" min="0" value="2">
+        </div>
+        <div>
+            <label for="">Birthday</label>
+            <!-- type="date" เป็นหารเลือกวันที่ เเล้วเเต่เราจะเอาไปทำอะไร -->
+            <input type="date" name="Birthdate" id=""> 
+        </div>
+        <div>
+            <label for="">tel</label>
+            <input type="tel" name="tel" id="">
+        </div>
+        <div>
+            <label for="">สีที่ชอบ</label>
+            <input type="color" name="favorcolor" id="">
+        </div>
+        <div>
+            <label for="">สร้างช่วงความ...</label>
+            <input type="range" name="rang">
+        </div>
+
+        <!-- ตัวเลือก -->
+        <div>
+            <label for="">ระดับการศึกษา</label>
+            <!-- select สร้างตัวเลือกขึ้นมา -->
+            <select name="edu" id="">
+                <!-- option เป็นตัวเลือก -->
+                <option value="ปตรี">ป.ตรี</option>
+                <option value="มต้น">ม.ต้น</option>
+                <!-- selected กำหนดให้เป็นค่าเริ่มต้น -->
+                <option value="มปลาย" selected>ม.ปลาย</option>
+            </select>
+        </div>
+        <div>
+            <label for="">เพศ</label>
+            <!-- เลือกได้ 1 คำตอบ -->
+            <!-- ต้องกำหนดให้มันอยู่กลุ่มเดียวกันที่ name ถ้าไม่กำหนดมันจะเลือกได้หลายคำตอบ ถ้ากำหนดเเล้วมันจะเลือกได้1คำตอบ -->
+            <input type="radio" name="gender">ชาย
+            <input type="radio" name="gender">หญิง
+            <input type="radio" name="gender">กำหนดเอง
+        </div>
+        <div>
+            <!-- เลือกได้หลายตัวเลือก -->
+            <label for="">สิ่งที่ชอบ</label>
+            <input type="checkbox" name="fav" id="">ฟังเพลง
+            <input type="checkbox" name="fav" id="">เขียนโปรเเกรม
+            <input type="checkbox" name="fav" id="">ดูหนัง
+        </div>
+        <div>
+            <label for="">เเนบเอกสาร</label>
+            <!-- เเนบไฟล์ -->
+            <input type="file">
+        </div>
+        <div>
+            <label for="">เเนบเว็บไซต์</label>
+            <!-- เเนบลิงค์ต่างๆ -->
+            <input type="url">
+        </div>
+        <div>
+            <!-- เอาไว้เวลากดส่ง เเล้วข้อมูลก็จะกลับไปที่ back end -->
+            <input type="submit" value="บันทึกข้อมูล1">
+            <button type="submit">บันทึกข้อมูล2</button>
+            <!-- เเต่ละอย่างทำได้ 2 เเบบ -->
+            <input type="reset"  value="ล้างข้อมูล1">
+            <button type="reset">ล้างข้อมูล2</button>
+            <!-- ต้องอยู่ใน tag form ไม่งั้นมันจะไม่ล้างข้อมูลของฟอล์มให้ -->
+            <!-- ถ้าไม่ใส่ value มันจะมีค่าเริ่มต้นให้เป็น Reset มาให้อยู่เเล้ว -->
+        </div>
+    </form>
+    <span style="border:1px solid ;" align="center">Weeraphat</span>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--ข้อมูลพื้นฐานของเว็บ-->
+    <!--tag attribute-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ออกเเบบมาเพื่อให้เข้าได้หลายรูปเเบบ เช่น จอคอม จอมือถือ ในอุปกรณืพกพา-->
+    <meta name="description" content="เว็บเกี่ยวกับการเขียนโปรเเกรม">   <!--คำอธิบาย-->
+    <meta name="author" content="Weeraphat">                    <!--ผู้พัฒนา เจ้าของเว็บ-->
+    <meta name="keywords" content="html5 python">                <!--keywords สำหรับการหาเว็บไซต์-->
+
+    <!--meta ต้องเขียนก่อน title -->
+    <title>ยินดีต้อนรับ</title>              <!-- หัวเรื่อง -->
+</head>
+<body>
+    <h1>html เบื้องต้น</h1>    
+    <a href="http://google.com" target="_blank">เปิดเว็บgoogle</a>   <!--การลิงค์ข้อมูล สามาระให้เปิดหน้าเว็บขึ้นมาใหม่ด้วย target="_blank"  ถ้าไม่ใส่ก็ใช้หน้าเดิมเป็นหน้าใหม่-->
+    <!-- <a href="ลิงค์ที่จะเชื่อมโยงไปถึง"></a>   การลิงค์ข้อมูล  -->
+    <!-- หัวเรื่อง(heading) ใช้ tag <h1> ถึง <h6>   h1 จะมีขนาดใหญ่ที่สุด เเล้วเล็กลงไปเลื่อยๆ -->
+    <h1>html 1</h1>
+    <h2>html 2</h2>
+    <h3>html 3</h3>
+    <h4>html 4</h4>
+    <h5>html 5</h5>
+    <h6>html 6</h6>
+    <!-- paragraphs <p> จุดเริ่มต้นของ Paragraphs จะเริ่มที่บรรทัดใหม่ และประโยคที่ไม่ได้อยู่ใน Paragraphs เดียวกัน แต่อยู่ในตําแหน่งที่ต่อจากParagraphs ก็จะถูกจัดให้ขึ้นบรรทัดใหม่ทันที -->
+        <!-- <p>  เหมาะสำหรับเนื้อหายาวๆ ข้อความยาวๆ -->
+    <p>Weeraphat</p>
+    <!-- lorem การกำหนดข้อความให้เราอัตโนมัติ ยาวววววววๆๆ เป็นข้อความตัวอย่าง   lorem40 => 40คำ   lorem2 => 2คำ-->
+    <p>บลาๆๆๆๆๆๆๆๆๆๆๆๆ............ Lorem, ipsum.</p>
+    <!-- tag อื่นๆที่ใช้กับข้อความได้ เช่น <p> <h>ได้ 
+        <small>   ตัวเล็ก
+        <strong>  ตัวหนา
+        <b>       ตัวหนา
+        <i>       ตัวเอียง
+        <u>       ขีดเส้นใต้
+        <ins>     ขีดเส้นใต้
+        <del>     ขีดค่าข้อความ
+        <mark>    ไฮไลท์ข้อความ
+        <sup>     ยกกำลัง
+        <sub>     ตัวห้อย
+        อื่นๆ -->
+    <p>hello <small>hello</small> <strong>hello</strong> <b>hello</b>  <i>hello</i>   </p>
+    <h1>ร้านชาบู</h1>
+    <p> <u>ส่วนลด</u> <del>Lorem</del> ipsum <mark> dolor</mark> sit amet consectetur adipisicing elit. Dolores, eveniet?</p>
+    <h1>E=mc<sup>2</sup></h1>
+    <h1>H<sub>2</sub>O</h1>
+
+
+    <!--<br> tag สำหรับขึ้นบรรทัดใหม่  -->
+    <!-- <hr> tag สำหรับสร้างเส้นคั่นในเเนวนอน-->
+    <h2>ร้านกุ้งเผา</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit maxime <br> neque adipisci pariatur. Voluptatem, accusantium?</p>
+    <hr>  <!--สร้างเส้นคั่น-->
+    <h2>ร้านอะไรก็ไม่รู้</h2>
+    
+    <!-- การกำหนด link สำหรับหน้าเว็บ -->
+    <!-- internal => เชื่อมโยงเว็บในไฟล์เดียวกัน -->
+    <a href="test_pag1.html" target="_blank">หน้าที่ 1</a> <!--target="_blank"  => เปิดในอีกหน้าต่างถัดไป-->
+    <a href="test_pag2.html">หน้าที่ 2</a>
+    
+    <!-- external => เชื่อมโยงไฟล์ต่างที่กัน หรือไปลิงค์อื่นๆ-->
+    <a href="test_shop/test_shop1.html" target="_blank">shop 1</a>
+            <!-- test_shop1 อยู่ในโฟลน์เดอร์ test_shop ต้องอ้างอิงเข้าถึงด้วย  / =>  test_shop/test_shop1.html -->
+            <!-- ../ ย้อนกลับไปโฟนล์เดอร์ก่อนหน้า หมายถึง ที่เก็บไฟล์ -->
+    <a href="http://www.google.com" target="_blank">open google <br></a>
+       
+    
+    <!-- insert images -->
+    <!-- <img src="ต่ำแหน่งรูปภาพ" alt="ข้อความที่จะปรากฎเมื่อเอาเมาส์ไปวาง" width="ความกว้าง" height="ความสูง"> -->
+    <!-- ได้ทั้ง internal external -->
+    <!-- internal -->
+    <p><img src="images/27314.jpg" alt="dinner" width="899px" height="455px"><br> สามรถใส่ข้อความเข้ามาได้โดยใช้ tag p</p>
+    <p>dinner</p>
+    <!-- external -->
+    <img src="data:image/jpeg;base64,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" alt="">
+    
+
+
+    <!-- การแสดงรายการ list มี 2 รูปแบบ
+    ตัวเลข (oeder list : OL)
+    สัญลักษณ์ (unorder list : UL) -->
+    <!-- <ol type="รูปแบบการแสดงผล">
+        <li>หัวข้อย่อยที่ 1</li>
+        <li>หัวข้อย่อยที่ 2</li>
+        <li>หัวข้อย่อยที่ 3</li>
+    </ol> 
+    type ก็จะมีหลากหลายในการใช้เช่น
+    "A" => A,B,C 
+    "a" => a,b,c
+    "I" => เลขโรมัน-->
+
+    <!-- <ul type="รูปแบบการแสดงผล">
+        <li>หัวข้อย่อยที่ 1</li>
+        <li>หัวข้อย่อยที่ 2</li>
+        <li>หัวข้อย่อยที่ 3</li>
+    </ul>
+    type ก็จะมีหลากหลายในการใช้เช่น
+    disc => จุดสีดำ
+    circle => จุดวงกลมโปร่ง
+    square => สีเหลี่ยมทึบ -->
+    <!-- ที่ test_shop1.html -->
+
+
+
+    <!-- การสร้างตาราง(table)
+    <table> สร้างตาราง
+    <thead> เนื้อหาหัวตาราง
+    <tbody> เนื้อหาตาราง
+    <tfoot> ใต้ตางราง
+    <tr> เเถว
+    <td> คอลัมน์
+    <th> หัวคอลัมน์ -->
+        <!-- attribute ของตาราง
+        border = "ความหนาของเส้น" เริ่มต้นที่ 0
+        width = "%" ความกว้างหน่วยเป็น %
+        bgcolor = "สี" สีพื้นหลังตาราง
+        <table bgcolor = "สี"> กำหนดสีทั้งเเถวเเละคอลัมน์
+        <tr bgcolor = "สี"> สีเเถว
+        <td bgcolor = "สี"> สีคอลัมน์ -->
+            <!-- Attribute ของตาราง
+            colspan=“x” รวมคอลัมน์ ค่า x คือจํานวนคอลัมน์ที่ต้องการรวมเข้าด้วยกัน (ช่อง <td>)  ง่ายๆคือเป็น1คอลัมน์เเต่กินหลายพื้นที่
+            rowspan=“x” รวมแถว ค่า x คือจํานวนแถวที่ต้องการรวมเข้าด้วยกัน 
+            align=“left, center, right” จัดตําแหน่งของภาพ หรืออักษรภายในช่องตาราง <td> ค่าปกติคือ left กำหนดได้ตามเเต่ละที่เลย หรือทั้งหมดก็ได้
+            Cellpadding แสดงข้อมูลภายในตาราง หากมีค่ามากก็จะมีพื้นที่การแสดงผลเป็นที่ว่างมากขึ้น โดยมีค่าเริ่มต้นเป็น 0 (หน่วย Pixel)  ขยายพื้นที่ด้านใน
+            Cellspacing กําหนดขนาดเส้นตาราง หากมีค่ามากขึ้นเส้นตารางก็ จะมีขนาดมากตามไปด้วย โดยมีค่าเริ่มต้นเป็น 0 (หน่วย Pixel) ขอบก็จะหนาขึ้น -->
+    <!-- ที่ test_pag2.html -->
+
+
+
+    <!-- การจัดกลุ่มด้วย div , span
+    <span></span> ใช้จัดกลุ่มข้อความหรือแท็กต่าง ๆ เข้าเป็นกลุ่มเดียวกันเพื่อกําหนด สี รูปแบบตัวอักษร หรือ style ให้กับข้อความและแท็กภายใต้ <span> ให้เป็นรูปแบบเดียวกัน  มันจะอยู่บันทัดเดียวกัน
+    <div></div> ใช้จัดกลุ่มข้อความหรือแท็กต่าง ๆ เข้าเป็นกลุ่มเดียวกันลักษณะคล้ายๆกับ <span>แต่แตกต่างกันตรงที่แท็ก div จะมีการขึ้นบรรทัดใหม่ก่อนเริ่มแสดงข้อความภายใต้แท็ก div (ถ้าไม่มีพวก tag <p> <h>)-->
+
+    
+
+    <!-- HTML FORM 
+    การพัฒนาเว็บแอปพลิเคชั่นจําเป็นต้องมีการสร้างแบบฟอร์มที่ผู้ใช้งานสามารถป้อนข้อมูลต่างๆได้ เพื่อนําข้อมูลที่ป้อนนั้น
+    ไปทําการประมวลผลอีกทีโดยการรับค่าข้อมูลจะดําเนินการผ่าน <form>....</form> 
+    tag ย่อยต่างๆ
+    <input> สร้างช่องรับข้อความต่างๆ รับ1บรรทัด
+    <select> เเสดงตัวเลือกในรูปเเบบ Drop-down
+        <option> ส้ร้างตัวเลือก
+    <button> สร้างปุ่ม
+    <label> กำหนดป้ายชื่อให้ช่องรับข้อมูล
+    <textarea> สร้างช่องรับข้อความเเบบหลายบรรทัด-->
+    <!-- ที่ form.html -->
+        <a href="form.html" target="_blank">เเบบฟอร์ม</a>
+</body>
+</html>

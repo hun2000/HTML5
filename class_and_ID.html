@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+        }
+        /* การเข้าถึง class จะใช้ . เเล้วตามด้วยชื่อ class */
+        .b{
+            color: blue;
+        }
+        .a{
+            color: aqua;
+        }
+        .c{
+            background-color: pink;
+        }
+        /* การเข้าถึง ID จะใช้ # เเล้วตามด้วยชื่อ */
+        #b{
+            color: green;
+        }
+        #a{
+            color: blueviolet;
+        }
+        #c{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- class and ID    จะไปมีผลตอนเอาไปใช้ร่วมกันกับ CSS Javaslip  ID > class > tag ต่างๆ-->
+    <!-- class สามารถใช้ชื่อซ้ำกันได้ -->
+    <!-- ID ไม่สามารถใช้ชื่อซ้ำกันได้ -->
+    <p class="a" id="c">Weeraphat</p>
+    <h1 class="b">Weeraphat</h1>
+    <p class="a">Weeraphat</p>
+    <h1 id="a" class="c">Weeraphat</h1>
+    <h2 id="b">Weeraphat</h2>
+    <div class="b">
+        HTML CSS PYTHON
+    </div>
+    <span class="a">
+        Weeraphat
+    </span>
+</body>
+</html>
